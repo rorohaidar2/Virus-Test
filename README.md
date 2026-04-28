@@ -1,14 +1,34 @@
-# Virus-Test
-## License & Disclaimer
+# Windows Security Helper (Prank/Malware Simulation)
 
-This project is for **educational and entertainment purposes only**. 
+A Python-based prank script that simulates malware behavior for testing and educational purposes.
 
-⚠️ **USE AT YOUR OWN RISK. DO NOT RUN ON PRODUCTION SYSTEMS.**
+## ⚠️ WARNING
 
-- No warranty provided
-- Author not liable for any damage
-- Run only in VMs/test environments
-- Will be flagged by antivirus
-- Requires admin privileges
+**DO NOT RUN ON YOUR MAIN SYSTEM.** This is designed to be annoying and potentially disruptive.
 
-This is not open-source software. No license granted.
+**USE ONLY IN A CONTROLLED ENVIRONMENT (VM, TEST MACHINE).**
+
+## What It Does
+
+This script simulates malware behavior by:
+- Displaying fake virus warning popups
+- Consuming CPU and memory resources (causes lag)
+- Attempting to copy itself to System32
+- Adding itself to Windows startup (registry persistence)
+
+## Requirements
+
+- Python 3.x
+- Windows OS (for full functionality)
+- Administrator privileges (for System32/registry modifications)
+
+## How to Build
+
+```bash
+# Install PyInstaller
+pip install pyinstaller
+
+# Build the executable
+pyinstaller --onefile --noconsole --name "Windows_Update_Helper" virus_source.py
+
+# The EXE will be in the dist/ folder
